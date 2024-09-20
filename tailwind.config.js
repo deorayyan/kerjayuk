@@ -7,10 +7,13 @@ module.exports = {
   ],
   theme: {
     extend: {
-      colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+      fontFamily: {
+        display: ["var(--font-opensans)"],
+        body: ["var(--font-rubik)"],
       },
+    },
+    container: {
+      center: true,
     },
   },
   plugins: [],

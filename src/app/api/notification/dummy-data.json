@@ -1,0 +1,83 @@
+[
+  {
+    "id": 1,
+    "title": "Reimbursement",
+    "description": "Your submission &quot;<i>Lorem ipsum dolor sit amet...</i>&quot; with total cost 50,000 has been <b>paid</b>, please check your BRIMO application, Thankyou!",
+    "type": "reimbursement",
+    "viewed": false,
+    "status": "approved",
+    "time": "Today"
+  },
+  {
+    "id": 2,
+    "title": "Reimbursement",
+    "description": "Your submission &quot;<i>description</i>&quot; has been <b>rejected</b>, please click for details",
+    "type": "reimbursement",
+    "viewed": true,
+    "status": "rejected",
+    "time": "Yesterday"
+  },
+  {
+    "id": 4,
+    "title": "Reimbursement",
+    "description": "Your submission &quot;<i>Lorem ipsum dolor sit amet...</i>&quot; with total cost 50,000 has been <b>paid</b>, please check your BRIMO application, Thankyou!",
+    "type": "reimbursement",
+    "viewed": false,
+    "status": "approved",
+    "time": "2022-10-06"
+  },
+  {
+    "id": 5,
+    "title": "Sickness",
+    "description": "Your submission has been <b>approved</b> by the Superior.",
+    "type": "sickness",
+    "viewed": false,
+    "status": "approved",
+    "time": "2022-10-05"
+  },
+  {
+    "id": 6,
+    "title": "Sickness",
+    "description": "Your submission has been <b>rejected</b>, please confirm with your Superior.",
+    "type": "sickness",
+    "viewed": true,
+    "status": "rejected",
+    "time": "2022-10-05"
+  },
+  {
+    "id": 7,
+    "title": "Sickness",
+    "description": "Your submission is being <b>reviewed</b> to the Superior for the approval process, please wait",
+    "type": "sickness",
+    "viewed": true,
+    "status": "pending",
+    "time": "2022-10-05"
+  },
+  {
+    "id": 8,
+    "title": "Overtime",
+    "description": "Your submission has been <b>approved</b> by the Superior",
+    "type": "overtime",
+    "viewed": false,
+    "status": "approved",
+    "time": "2022-10-04"
+  },
+  {
+    "id": 9,
+    "title": "Overtime",
+    "description": "Your submission has been <b>rejected</b>, please confirm with your Superior",
+    "type": "overtime",
+    "viewed": true,
+    "status": "pending",
+    "time": "2022-10-04"
+  },
+  {
+    "id": 10,
+    "title": "Overtime",
+    "description": "Your submission is being <b>reviewed</b> to the Superior for the approval process, please wait",
+    "type": "overtime",
+    "viewed": true,
+    "status": "rejected",
+    "time": "2022-10-04"
+  }
+]

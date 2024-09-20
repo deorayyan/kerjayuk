@@ -1,101 +1,280 @@
-import Image from "next/image";
+import {
+  faCalendarCheck,
+  faClock,
+  faRectangleList,
+} from "@fortawesome/free-regular-svg-icons";
+import {
+  faArrowRotateRight,
+  faClockRotateLeft,
+  faGear,
+  faHome,
+  faRightFromBracket,
+} from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Link from "next/link";
+
+import NewsSlider from "@/components/NewsSlider";
+import MainHead from "@/components/MainHead";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.js
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <div className="container main-container grid grid-cols-1 pb-28">
+      <MainHead />
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+      {/* Main */}
+      <div className="grid grid-cols-1 gap-6">
+        {/* Info card */}
+        <div className="px-5">
+          <h2 className="mb-2">Hi, Good Morning!</h2>
+          <div className="p-4 bg-gradient-to-br from-[#FF0014] to-[#D20068] rounded-xl text-white grid grid-cols-1 gap-4 shadow-md">
+            {/* Top */}
+            <div className="flex justify-between gap-2">
+              {/* Left content */}
+              <div className="flex gap-3">
+                {/* Avatar */}
+                <div className="rounded-full w-11 h-11 bg-black"></div>
+                <div>
+                  <p className="font-bold">Tabay</p>
+                  <p className="text-xs italic opacity-80">UI/UX Designer</p>
+                </div>
+              </div>
+              {/* Right content */}
+              <div className="text-right">
+                <p className="text-xs italic opacity-70">Member since</p>
+                <p className="font-bold">01 Juni 2021</p>
+              </div>
+            </div>
+            {/* Botton */}
+            <div className="flex justify-between gap-2 items-end">
+              <div>
+                <p className="text-xs opacity-70">Location</p>
+                <p className="font-bold text-sm">Kantor Sahid</p>
+              </div>
+              <div>
+                <p className="text-xs italic opacity-70">ICO</p>
+              </div>
+            </div>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+
+        {/* Activity card */}
+        <div className="px-5">
+          <h2 className="font-bold font-display mb-3">Today's Activity</h2>
+
+          <div className="grid grid-cols-3">
+            <div className="grid grid-cols-1 justify-center text-center p-2">
+              <div className="text-center mb-1">
+                <FontAwesomeIcon
+                  icon={faClock}
+                  width={22}
+                  className="text-red-500 inline-block"
+                />
+              </div>
+              <p className="font-bold text-sm">08:30</p>
+              <p className="text-xs">Check In</p>
+            </div>
+            <div className="grid grid-cols-1 justify-center text-center p-2">
+              <div className="text-center mb-1">
+                <FontAwesomeIcon
+                  icon={faArrowRotateRight}
+                  width={22}
+                  className="text-red-500 inline-block"
+                />
+              </div>
+              <p className="font-bold text-sm text-red-500">03:00:00</p>
+              <p className="text-xs">Working Hours</p>
+            </div>
+            <div className="grid grid-cols-1 justify-center text-center p-2">
+              <div className="text-center mb-1">
+                <FontAwesomeIcon
+                  icon={faClockRotateLeft}
+                  width={22}
+                  className="text-red-500 inline-block"
+                />
+              </div>
+              <p className="text-sm">--:--</p>
+              <p className="text-xs">Check Out</p>
+            </div>
+          </div>
+        </div>
+
+        {/* News card */}
+        <div>
+          <div className="px-5">
+            <h2 className="font-bold font-display mb-3">PCS News</h2>
+          </div>
+          <NewsSlider />
+        </div>
+
+        {/* Online */}
+        <div className="px-5">
+          <h2 className="font-bold font-display mb-3">Online</h2>
+
+          <div className="rounded-xl shadow-lg p-3 w-full -gap-4 whitespace-nowrap">
+            <div className="inline-block">
+              <div className="grid grid-cols-1">
+                <div className="w-11 h-11 border-2 border-white bg-black rounded-full"></div>
+                <div className="text-center">
+                  <p className="text-[10px] font-bold">Jefril</p>
+                  <p className="text-[8px]">Sahid</p>
+                </div>
+              </div>
+            </div>
+            <div className="inline-block -ml-2.5">
+              <div className="grid grid-cols-1">
+                <div className="w-11 h-11 border-2 border-white bg-black rounded-full"></div>
+                <div className="text-center">
+                  <p className="text-[10px] font-bold">Zasami</p>
+                  <p className="text-[8px]">BSD</p>
+                </div>
+              </div>
+            </div>
+            <div className="inline-block -ml-2.5">
+              <div className="grid grid-cols-1 ">
+                <div className="w-11 h-11 border-2 border-white bg-black rounded-full"></div>
+                <div className="text-center">
+                  <p className="text-[10px] font-bold">Sam</p>
+                  <p className="text-[8px]">Sahid</p>
+                </div>
+              </div>
+            </div>
+            <div className="inline-block -ml-2.5">
+              <div className="grid grid-cols-1">
+                <div className="w-11 h-11 border-2 border-white bg-black rounded-full"></div>
+                <div className="text-center">
+                  <p className="text-[10px] font-bold">Aldo</p>
+                  <p className="text-[8px]">Sahid</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="inline-block -ml-2.5">
+              <div className="grid grid-cols-1">
+                <div className="w-11 h-11 border-2 border-white bg-black rounded-full"></div>
+                <div className="text-center">
+                  <p className="text-[10px] font-bold">Erwin</p>
+                  <p className="text-[8px]">Sahid</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="inline-block -ml-2.5">
+              <div className="grid grid-cols-1">
+                <div className="w-11 h-11 border-2 border-white bg-black rounded-full"></div>
+                <div className="text-center">
+                  <p className="text-[10px] font-bold">Arye</p>
+                  <p className="text-[8px]">BSD</p>
+                </div>
+              </div>
+            </div>
+            <div className="inline-block -ml-2.5">
+              <div className="grid grid-cols-1 ">
+                <div className="w-11 h-11 border-2 border-white bg-black rounded-full"></div>
+                <div className="text-center">
+                  <p className="text-[10px] font-bold">Risya</p>
+                  <p className="text-[8px]">BSD</p>
+                </div>
+              </div>
+            </div>
+            <div className="inline-block -ml-2.5">
+              <div className="grid grid-cols-1 ">
+                <div className="w-11 h-11 border-2 border-white bg-black rounded-full"></div>
+                <div className="text-center">
+                  <p className="text-[10px] font-bold">Nesha</p>
+                  <p className="text-[8px]">WFH</p>
+                </div>
+              </div>
+            </div>
+            <div className="inline-block -ml-2.5">
+              <div className="grid grid-cols-1 ">
+                <div className="w-11 h-11 border-2 border-white bg-gradient-to-br from-[#FF0014] to-[#D20068] rounded-full relative">
+                  <div className="absolute text-white w-full h-full grid grid-cols-1 content-center items-center text-center">
+                    <p className="text-sm">10</p>
+                    <p className="text-[8px]">more</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Bottom nav */}
+      <div className="bg-white fixed bottom-0 left-0 w-full border-t">
+        <div className="container main-container flex justify-between px-5 py-2 w-full">
+          <div className="flex gap-8">
+            <Link
+              href={"/"}
+              className="grid grid-cols-1 justify-center text-red-500 gap-1"
+            >
+              <div className="text-center">
+                <FontAwesomeIcon
+                  icon={faHome}
+                  width={22}
+                  className="inline-block"
+                />
+              </div>
+              <p className="font-bold text-xs">Home</p>
+            </Link>
+            <Link
+              href={"/"}
+              className="grid grid-cols-1 justify-center text-gray-400 gap-1"
+            >
+              <div className="text-center">
+                <FontAwesomeIcon
+                  icon={faCalendarCheck}
+                  width={22}
+                  className="inline-block"
+                />
+              </div>
+              <p className="text-xs">Attendance</p>
+            </Link>
+          </div>
+          <div>
+            <Link
+              href={"/"}
+              className="grid grid-cols-1 justify-center text-red-500 gap-1.5"
+            >
+              <div className="text-center text-white bg-red-500 w-16 h-16 flex items-center justify-center rounded-full -mt-10 shadow-md">
+                <FontAwesomeIcon
+                  icon={faRightFromBracket}
+                  width={24}
+                  className="inline-block"
+                />
+              </div>
+              <p className="font-bold text-xs">Check Out</p>
+            </Link>
+          </div>
+          <div className="flex gap-8">
+            <Link
+              href={"/"}
+              className="grid grid-cols-1 justify-center text-gray-400 gap-1"
+            >
+              <div className="text-center">
+                <FontAwesomeIcon
+                  icon={faRectangleList}
+                  width={22}
+                  className="inline-block"
+                />
+              </div>
+              <p className="text-xs">Form</p>
+            </Link>
+            <Link
+              href={"/"}
+              className="grid grid-cols-1 justify-center text-gray-400 gap-1"
+            >
+              <div className="text-center">
+                <FontAwesomeIcon
+                  icon={faGear}
+                  width={22}
+                  className="inline-block"
+                />
+              </div>
+              <p className="text-xs">Settings</p>
+            </Link>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
